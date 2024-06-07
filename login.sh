@@ -4,7 +4,7 @@
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 
 # 修改 PermitRootLogin 和 PasswordAuthentication 选项
-sed -i 's/^#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
+sed -i 's/^#PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 
 # 重启 SSH 服务
