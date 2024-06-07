@@ -9,11 +9,11 @@ sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_
 
 # 重启 SSH 服务
 if systemctl is-active --quiet ssh; then
-    systemctl restart ssh
+	systemctl restart ssh
 elif systemctl is-active --quiet sshd; then
-    systemctl restart sshd
+	systemctl restart sshd
 else
-    service ssh restart
+	service ssh restart
 fi
 
 echo "SSH 配置已修改并重启服务。"
